@@ -96,12 +96,12 @@ function create_column(){
 
 function post_to_db(){
 
-        //validate_form();
+        $data = get_data_from_request();
         $connection = get_dbc();
         $table = "electives";
-        $subject = $_POST["subject"];
-        $description = $_POST["description"];
-        $lecturer = $_POST["lecturer"];
+        $subject = $data[0];
+        $description = $data[1];
+        $lecturer = $data[2];
         $created_at = date('Y-m-d H:i:s');
 
         $sqlInsert = "INSERT INTO $table  (title, description, lecturer, created_at)
