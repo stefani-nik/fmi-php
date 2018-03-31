@@ -1,18 +1,11 @@
 <?php
 
 function validate_form(){
-
     
-    // For some reason my $_POST variable is always empty 
-    // So I had to use the php://input for getting the data
-    // I guess it is some problem in the configurations in php.ini
-    // I will be glad if I get an advice :)
-    
-    $data = get_data_from_request();
     $subjectErr = $lecturerErr = $descriptionErr = "";
-    $subject = $data[0];
-    $lecturer = $data[1];
-    $description = $data[2];
+    $subject = helper($_POST["subject"]);
+    $lecturer = helper($_POST["lecturer"]);
+    $description = helper($_POST["description"]);
        
         if (empty($subject)) {
             $subjectErr = "Полето предмет е задължително";
@@ -43,23 +36,13 @@ function validate_form(){
             }
         }
 
-
-    function helper($data){
-        $data = trim($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
-
     return array($subjectErr, $lecturerErr, $descriptionErr);
 }
 
-function get_data_from_request(){
-    $data = explode("&",file_get_contents("php://input"));
-    $subject = explode("=", $data[0])[1];
-    $lecturer = explode("=", $data[1])[1];
-    $description = explode("=", $data[2])[1];
-    
-    return array($subject, $lecturer, $description);
+function helper($data){
+    $data = trim($data);
+    $data = htmlspecialchars($data);
+    return $data;
 }
 
 ?>

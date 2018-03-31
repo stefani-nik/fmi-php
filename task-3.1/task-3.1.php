@@ -6,7 +6,7 @@
     $errors = array("","","");
 
     if($_SERVER['REQUEST_METHOD']=='POST'){
-
+        
         $errors = validate_form();
         if(count(array_filter($errors)) == 0){
            post_to_db();
@@ -23,7 +23,7 @@
 <body>
 
 <h1>Избираеми дисциплини</h1>
-<form name="electives" method="POST" action="">
+<form name="electives" method="POST" action="task-3.1.php">
     <div>
         <label>Предмет</label>
         <span class="error">* <?php echo $errors[0]; ?> </span>
