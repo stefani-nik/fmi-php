@@ -10,12 +10,19 @@ function get_dbc(){
     global $servername, $user, $pass, $db;
     try {
         $connection = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
-        echo "Connection successful </br>";
+        echo "<div class='infobox'> Connection successful </div>";
     }
     catch (PDOException $e) {
-        echo "Connection failed: " . $e->getMessage();
-        echo "Creating database.. ";
-        create_db();
+
+           if($e->getCode() == 1049) {
+               echo "<div class='errorbox'> Creating database.. </div>";
+               create_db();
+               $connection = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
+           }
+           else{
+            echo "<div class='errorbox'>Connection failed: " . $e->getMessage() . "</div>";
+           }
+
     }
     return $connection;
 }
@@ -28,18 +35,21 @@ function create_db(){
         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sql = "CREATE DATABASE IF NOT EXISTS $db";
         $connection->exec($sql);
-        echo "Successfully created database $db </br>";
+
+        echo "<div class='infobox'> Successfully created database $db</div>";
         create_table();
     }
     catch (PDOException $e) {
-        echo "Creating database $db failed: " . $e->getMessage();
+        echo "<div class='errorbox'> Creating database $db failed: " . $e->getMessage() . "</div>";
     }
+
 }
 
 function create_table(){
 
     $connection = get_dbc();
     $table = "electives";
+
     // Create table if it does not exist
     $sqlElectives = "CREATE TABLE IF NOT EXISTS $table (
                       id INT AUTO_INCREMENT PRIMARY KEY,
@@ -50,11 +60,11 @@ function create_table(){
 
     try {
         $connection->exec($sqlElectives);
-        echo "Table Electives created successfully </br>";
+        echo "<div class='infobox'> Table Electives created successfully </div>";
         insert_in_table();
     }
     catch (PDOException $e) {
-        echo "Creating table Electives failed: " . $e->getMessage();
+        echo "<div class='errorbox'> Creating table Electives failed: " . $e->getMessage() . "</div>";
     }
 }
 
@@ -69,11 +79,11 @@ function insert_in_table(){
 
     try{
         $connection->exec($sqlInput);
-        echo "Insertion successful </br>";
+        echo "<div class='infobox'> Insertion successful </div>";
         create_column();
     }
     catch(PDOException $e){
-        echo "Inserting into table Electives failed : ". $e->getMessage();
+        echo "<div class='errorbox'> Inserting into table Electives failed : ". $e->getMessage() . "</div>";
     }
 }
 
@@ -86,10 +96,10 @@ function create_column(){
 
     try{
         $connection->exec($sqlAddColumn);
-        echo "Successfully added column CREATED_AT </br>";
+        echo "<div class='infobox'> Successfully added column CREATED_AT </div>";
     }
     catch(PDOException $e){
-        echo "Creating column CREATED_AT failed : ". $e->getMessage();
+        echo "<div class='errorbox'> Creating column CREATED_AT failed : ". $e->getMessage() . "</div>";
     }
 
 }
@@ -109,10 +119,10 @@ function post_to_db(){
 
         try{
             $connection->exec($sqlInsert);
-            echo "Your successfully added the elective $subject";
+            echo "<div class='infobox'> Your successfully added the elective $subject </div>";
         }
         catch (PDOException $e){
-            echo "Adding $subject to the database failed : ". $e->getMessage();
+            echo "<div class='errorbox'> Adding $subject to the database failed : ". $e->getMessage() . "</div>";
         }
 
 }
