@@ -10,7 +10,6 @@ function get_dbc(){
     global $servername, $user, $pass, $db;
     try {
         $connection = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
-        echo "<div class='infobox'> Connection successful </div>";
     }
     catch (PDOException $e) {
 
@@ -20,7 +19,7 @@ function get_dbc(){
                $connection = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
            }
            else{
-            echo "<div class='errorbox'>Connection failed: " . $e->getMessage() . "</div>";
+             echo "<div class='errorbox'>Connection failed: " . $e->getMessage() . "</div>";
            }
 
     }
@@ -28,6 +27,7 @@ function get_dbc(){
 }
 
 function create_db(){
+   
     global $servername, $user, $pass, $db;
 
     try {
@@ -109,9 +109,9 @@ function post_to_db(){
         $data = get_data_from_request();
         $connection = get_dbc();
         $table = "electives";
-        $subject = $data[0];
-        $lecturer = $data[1];
-        $description = $data[2];
+        $subject = htmlspecialchars($data[0]);
+        $lecturer = htmlspecialchars($data[1]);
+        $description = htmlspecialchars($data[2]);
     
         $created_at = date('Y-m-d H:i:s');
 
@@ -119,7 +119,8 @@ function post_to_db(){
                       VALUES ('$subject','$description','$lecturer','$created_at')";
 
         try{
-            $connection->exec($sqlInsert);
+            $query = $connection->prepare($sqlInsert);
+            $query->execute();
             echo "<div class='infobox'> Your successfully added the elective $subject </div>";
         }
         catch (PDOException $e){
@@ -132,16 +133,13 @@ function get_from_db($id){
 
     $connection = get_dbc();
     $table = "electives";
+    $sqlGet = "SELECT * FROM $table WHERE id=$id";
 
     try{
-
-        $sqlGet = "SELECT * FROM $table WHERE id=:id";
         
         $query = $connection->prepare($sqlGet);
-        $query->bindParam(':id', $id);
         $query->execute();
         $result = $query -> fetch(PDO::FETCH_ASSOC);
-        var_dump($result["title"]);
         return $result;
     }
     catch (PDOException $e){
@@ -151,20 +149,23 @@ function get_from_db($id){
 }
 
 function update_entity($id){
+    
     $data = get_data_from_request();
     $connection = get_dbc();
     $table = "electives";
-    $subject = $data[0];
-    $lecturer = $data[1];
-    $description = $data[2];
+    $subject = htmlspecialchars($data[0]);
+    $lecturer = htmlspecialchars($data[1]);
+    $description = htmlspecialchars($data[2]);
     $created_at = date('Y-m-d H:i:s');
 
-    $sqlInsert = "UPDATE $table 
+    $sqlUpdate = "UPDATE $table 
                   SET title='$subject', lecturer='$lecturer', description='$description', created_at='$created_at'
                   WHERE id=$id";
 
     try{
-        $connection->exec($sqlInsert);
+        $query = $connection->prepare($sqlUpdate);
+        $query->execute();
+        
         echo "<div class='infobox'> Your successfully updated the elective $subject </div>";
     }
     catch (PDOException $e){

@@ -54,12 +54,16 @@ function helper($data){
 
 function get_data_from_request(){
     
-    $data = explode("&",file_get_contents("php://input"));
+    $raw = str_replace("+"," ", file_get_contents("php://input"));
+    $data = explode("&",$raw);
     $subject = explode("=", $data[0])[1];
     $lecturer = explode("=", $data[1])[1];
     $description = explode("=", $data[2])[1];
+
+    var_dump(helper($description));
+        
+    return array(helper($subject), helper($lecturer), helper($description));
     
-    return array($subject, $lecturer, $description);
 }
 
 ?>

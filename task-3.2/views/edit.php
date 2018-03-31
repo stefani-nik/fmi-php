@@ -8,11 +8,11 @@
 
     if($_SERVER['REQUEST_METHOD']=='POST'){
 
-    $errors = validate_form();
-    if(count(array_filter($errors)) == 0){
-        update_entity($id);
-        $elective = get_from_db($id);
-    }
+        $errors = validate_form();
+        if(count(array_filter($errors)) == 0){
+            update_entity($id);
+            $elective = get_from_db($id);
+        }
 }
 ?>
 
