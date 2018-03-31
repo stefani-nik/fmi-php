@@ -147,6 +147,5 @@ function get_from_db($id){
         echo "<div class='errorbox'> Gettin entity with id $id form database failed : ". $e->getMessage() . "</div>";
     }
     
-
 }
 ?>
