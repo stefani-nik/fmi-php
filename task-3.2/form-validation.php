@@ -10,9 +10,9 @@ function validate_form(){
     
     $data = get_data_from_request();
     $subjectErr = $lecturerErr = $descriptionErr = "";
-    $subject = $data[0];
-    $lecturer = $data[1];
-    $description = $data[2];
+    $subject = helper($data[0]);
+    $lecturer = helper($data[1]);
+    $description = helper($data[2]);
        
         if (empty($subject)) {
             $subjectErr = "Полето предмет е задължително";
@@ -43,14 +43,13 @@ function validate_form(){
             }
         }
 
-
-    function helper($data){
-        $data = trim($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
-
     return array($subjectErr, $lecturerErr, $descriptionErr);
+}
+
+function helper($data){
+    $data = trim($data);
+    $data = htmlspecialchars($data);
+    return $data;
 }
 
 function get_data_from_request(){

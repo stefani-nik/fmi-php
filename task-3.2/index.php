@@ -7,10 +7,13 @@
 </head>
 <body>
     <?php
+        include ('form-validation.php');
+        include('db-manager.php');
         require_once('config.php');
         require_once('functions.php');
         $requestParsed = parseRequest();
         processRequest($requestParsed);
+
     ?>  
 </body>
 </html>

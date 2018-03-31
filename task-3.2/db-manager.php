@@ -110,8 +110,9 @@ function post_to_db(){
         $connection = get_dbc();
         $table = "electives";
         $subject = $data[0];
-        $description = $data[1];
-        $lecturer = $data[2];
+        $lecturer = $data[1];
+        $description = $data[2];
+    
         $created_at = date('Y-m-d H:i:s');
 
         $sqlInsert = "INSERT INTO $table  (title, description, lecturer, created_at)
@@ -147,5 +148,27 @@ function get_from_db($id){
         echo "<div class='errorbox'> Gettin entity with id $id form database failed : ". $e->getMessage() . "</div>";
     }
     
+}
+
+function update_entity($id){
+    $data = get_data_from_request();
+    $connection = get_dbc();
+    $table = "electives";
+    $subject = $data[0];
+    $lecturer = $data[1];
+    $description = $data[2];
+    $created_at = date('Y-m-d H:i:s');
+
+    $sqlInsert = "UPDATE $table 
+                  SET title='$subject', lecturer='$lecturer', description='$description', created_at='$created_at'
+                  WHERE id=$id";
+
+    try{
+        $connection->exec($sqlInsert);
+        echo "<div class='infobox'> Your successfully updated the elective $subject </div>";
+    }
+    catch (PDOException $e){
+        echo "<div class='errorbox'> Updating $subject failed : ". $e->getMessage() . "</div>";
+    }
 }
 ?>
