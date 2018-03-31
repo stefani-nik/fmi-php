@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f792b3b1-d96a-49a2-93e9-32aa3afcab57" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-3.1/db-config.php" afterPath="$PROJECT_DIR$/task-3.1/db-config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-3.1/form-validation.php" afterPath="$PROJECT_DIR$/task-3.1/form-validation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-3.1/task-3.1.php" afterPath="$PROJECT_DIR$/task-3.1/task-3.1.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-3.2/db-manager.php" afterPath="$PROJECT_DIR$/task-3.2/db-manager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-3.2/form-validation.php" afterPath="$PROJECT_DIR$/task-3.2/form-validation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-3.2/views/post.php" afterPath="$PROJECT_DIR$/task-3.2/views/post.php" />
     </list>
     <ignored path="fmi-php.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,14 +29,14 @@
       <file leaf-file-name="form-validation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task-3.1/form-validation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+            <state relative-caret-position="-134">
+              <caret line="11" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="47" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="task-3.1.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="task-3.1.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task-3.1/task-3.1.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -65,8 +64,8 @@
       <file leaf-file-name="db-config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task-3.1/db-config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-134">
-              <caret line="99" column="5" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
+            <state relative-caret-position="272">
+              <caret line="88" column="47" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="47" />
               <folding>
                 <marker date="1522504654142" expanded="true" signature="1525:1774" ph="CREATE TABLE... IF" />
                 <marker date="1522504654142" expanded="true" signature="2199:2513" ph="INSERT INTO electives... " />
@@ -79,20 +78,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db-manager.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="db-manager.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/task-3.2/db-manager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-673">
-              <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
+            <state relative-caret-position="2720">
+              <caret line="160" column="43" selection-start-line="160" selection-start-column="43" selection-end-line="160" selection-end-column="43" />
               <folding>
-                <marker date="1522488427137" expanded="true" signature="1378:1627" ph="CREATE TABLE... IF" />
-                <marker date="1522488427137" expanded="true" signature="2016:2330" ph="INSERT INTO electives... " />
-                <marker date="1522488427137" expanded="true" signature="2756:2791" ph="ALTER TABLE ${$table}... " />
-                <marker date="1522488427137" expanded="true" signature="3422:3567" ph="INSERT INTO ${$table}... " />
-                <marker date="1522488427137" expanded="true" signature="4034:4064" ph="SELECT * FRO... ${$table}" />
-                <marker date="1522488427137" expanded="true" signature="4034:4067" ph="SELECT * FRO... ${$table}" />
-                <marker date="1522488427137" expanded="true" signature="4726:4886" ph="UPDATE ${$ta... " />
-                <marker date="1522488427137" expanded="true" signature="4732:4886" ph="INSERT INTO ${$table}... " />
+                <marker date="1522506027265" expanded="true" signature="1472:1721" ph="CREATE TABLE... IF" />
+                <marker date="1522506027265" expanded="true" signature="2147:2461" ph="INSERT INTO electives... " />
+                <marker date="1522506027265" expanded="true" signature="2936:2971" ph="ALTER TABLE ${$table}... " />
+                <marker date="1522506027265" expanded="true" signature="3558:3703" ph="INSERT INTO ${$table}... " />
+                <marker date="1522506027265" expanded="true" signature="4170:4200" ph="SELECT * FRO... ${$table}" />
+                <marker date="1522506027265" expanded="true" signature="4170:4203" ph="SELECT * FRO... ${$table}" />
+                <marker date="1522506027265" expanded="true" signature="4823:4983" ph="UPDATE ${$ta... " />
+                <marker date="1522506027265" expanded="true" signature="4829:4983" ph="INSERT INTO ${$table}... " />
               </folding>
             </state>
           </provider>
@@ -111,8 +110,8 @@
       <file leaf-file-name="edit.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task-3.2/views/edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="102">
+              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
               <folding>
                 <marker date="1522487760290" expanded="true" signature="460:1298" ph="..." />
                 <marker date="1522487760290" expanded="true" signature="470:661" ph="..." />
@@ -131,8 +130,8 @@
       <file leaf-file-name="post.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task-3.2/views/post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+            <state relative-caret-position="204">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -151,8 +150,8 @@
       <file leaf-file-name="form-validation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task-3.2/form-validation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+            <state relative-caret-position="799">
+              <caret line="47" column="2" selection-start-line="47" selection-start-column="2" selection-end-line="47" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -198,16 +197,16 @@
         <option value="$PROJECT_DIR$/task-3.1/task-3.1.css" />
         <option value="$PROJECT_DIR$/task-3.2/db-config.php" />
         <option value="$PROJECT_DIR$/task-3.2/task-3.2.php" />
-        <option value="$PROJECT_DIR$/task-3.2/views/post.php" />
         <option value="$PROJECT_DIR$/task-3.2/functions.php" />
         <option value="$PROJECT_DIR$/task-3.2/config.php" />
         <option value="$PROJECT_DIR$/task-3.2/index.php" />
         <option value="$PROJECT_DIR$/task-3.2/views/edit.php" />
-        <option value="$PROJECT_DIR$/task-3.2/db-manager.php" />
-        <option value="$PROJECT_DIR$/task-3.2/form-validation.php" />
         <option value="$PROJECT_DIR$/task-3.1/task-3.1.php" />
         <option value="$PROJECT_DIR$/task-3.1/db-config.php" />
         <option value="$PROJECT_DIR$/task-3.1/form-validation.php" />
+        <option value="$PROJECT_DIR$/task-3.2/views/post.php" />
+        <option value="$PROJECT_DIR$/task-3.2/form-validation.php" />
+        <option value="$PROJECT_DIR$/task-3.2/db-manager.php" />
       </list>
     </option>
   </component>
@@ -268,20 +267,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="fmi-php" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fmi-php" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fmi-php" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task-3.2" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -353,18 +338,18 @@
       <updated>1520840245426</updated>
       <workItem from="1520840248058" duration="8030000" />
       <workItem from="1522142847922" duration="13593000" />
-      <workItem from="1522417254820" duration="33744000" />
+      <workItem from="1522417254820" duration="34843000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55367000" />
+    <option name="totallyTimeSpent" value="56466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -614,32 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task-3.2/views/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <marker date="1522487760290" expanded="true" signature="460:1298" ph="..." />
-            <marker date="1522487760290" expanded="true" signature="470:661" ph="..." />
-            <marker date="1522487760290" expanded="true" signature="671:728" ph="..." />
-            <marker date="1522487760290" expanded="true" signature="671:871" ph="..." />
-            <marker date="1522487760290" expanded="true" signature="881:934" ph="..." />
-            <marker date="1522487760290" expanded="true" signature="881:1094" ph="..." />
-            <marker date="1522487760290" expanded="true" signature="1104:1205" ph="..." />
-            <marker date="1522487760290" expanded="true" signature="1215:1236" ph="..." />
-            <marker date="1522487760290" expanded="true" signature="1215:1290" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-3.2/views/post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task-3.2/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -652,54 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-3.2/form-validation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-3.2/db-manager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-673">
-          <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
-          <folding>
-            <marker date="1522488427137" expanded="true" signature="1378:1627" ph="CREATE TABLE... IF" />
-            <marker date="1522488427137" expanded="true" signature="2016:2330" ph="INSERT INTO electives... " />
-            <marker date="1522488427137" expanded="true" signature="2756:2791" ph="ALTER TABLE ${$table}... " />
-            <marker date="1522488427137" expanded="true" signature="3422:3567" ph="INSERT INTO ${$table}... " />
-            <marker date="1522488427137" expanded="true" signature="4034:4064" ph="SELECT * FRO... ${$table}" />
-            <marker date="1522488427137" expanded="true" signature="4034:4067" ph="SELECT * FRO... ${$table}" />
-            <marker date="1522488427137" expanded="true" signature="4726:4886" ph="UPDATE ${$ta... " />
-            <marker date="1522488427137" expanded="true" signature="4732:4886" ph="INSERT INTO ${$table}... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-3.1/db-config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-134">
-          <caret line="99" column="5" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
-          <folding>
-            <marker date="1522504654142" expanded="true" signature="1525:1774" ph="CREATE TABLE... IF" />
-            <marker date="1522504654142" expanded="true" signature="2199:2513" ph="INSERT INTO electives... " />
-            <marker date="1522504654142" expanded="true" signature="2988:3023" ph="ALTER TABLE ${$table}... " />
-            <marker date="1522504654142" expanded="true" signature="3615:3709" ph="INSERT INTO $... " />
-            <marker date="1522504654142" expanded="true" signature="3615:3745" ph="INSERT INTO ${$table}... " />
-            <marker date="1522504654142" expanded="true" signature="3615:3760" ph="INSERT INTO ${$table}... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task-3.1/form-validation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -723,6 +634,80 @@
             <marker date="1522504031447" expanded="true" signature="885:1060" ph="..." />
             <marker date="1522504031447" expanded="true" signature="1070:1091" ph="..." />
             <marker date="1522504031447" expanded="true" signature="1070:1144" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-3.2/form-validation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="2" selection-start-line="47" selection-start-column="2" selection-end-line="47" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-3.1/form-validation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-134">
+          <caret line="11" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="47" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-3.1/db-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="88" column="47" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="47" />
+          <folding>
+            <marker date="1522504654142" expanded="true" signature="1525:1774" ph="CREATE TABLE... IF" />
+            <marker date="1522504654142" expanded="true" signature="2199:2513" ph="INSERT INTO electives... " />
+            <marker date="1522504654142" expanded="true" signature="2988:3023" ph="ALTER TABLE ${$table}... " />
+            <marker date="1522504654142" expanded="true" signature="3615:3709" ph="INSERT INTO $... " />
+            <marker date="1522504654142" expanded="true" signature="3615:3745" ph="INSERT INTO ${$table}... " />
+            <marker date="1522504654142" expanded="true" signature="3615:3760" ph="INSERT INTO ${$table}... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-3.2/views/post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-3.2/views/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding>
+            <marker date="1522487760290" expanded="true" signature="460:1298" ph="..." />
+            <marker date="1522487760290" expanded="true" signature="470:661" ph="..." />
+            <marker date="1522487760290" expanded="true" signature="671:728" ph="..." />
+            <marker date="1522487760290" expanded="true" signature="671:871" ph="..." />
+            <marker date="1522487760290" expanded="true" signature="881:934" ph="..." />
+            <marker date="1522487760290" expanded="true" signature="881:1094" ph="..." />
+            <marker date="1522487760290" expanded="true" signature="1104:1205" ph="..." />
+            <marker date="1522487760290" expanded="true" signature="1215:1236" ph="..." />
+            <marker date="1522487760290" expanded="true" signature="1215:1290" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task-3.2/db-manager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2720">
+          <caret line="160" column="43" selection-start-line="160" selection-start-column="43" selection-end-line="160" selection-end-column="43" />
+          <folding>
+            <marker date="1522506027265" expanded="true" signature="1472:1721" ph="CREATE TABLE... IF" />
+            <marker date="1522506027265" expanded="true" signature="2147:2461" ph="INSERT INTO electives... " />
+            <marker date="1522506027265" expanded="true" signature="2936:2971" ph="ALTER TABLE ${$table}... " />
+            <marker date="1522506027265" expanded="true" signature="3558:3703" ph="INSERT INTO ${$table}... " />
+            <marker date="1522506027265" expanded="true" signature="4170:4200" ph="SELECT * FRO... ${$table}" />
+            <marker date="1522506027265" expanded="true" signature="4170:4203" ph="SELECT * FRO... ${$table}" />
+            <marker date="1522506027265" expanded="true" signature="4823:4983" ph="UPDATE ${$ta... " />
+            <marker date="1522506027265" expanded="true" signature="4829:4983" ph="INSERT INTO ${$table}... " />
           </folding>
         </state>
       </provider>

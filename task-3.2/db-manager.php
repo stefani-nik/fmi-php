@@ -13,6 +13,7 @@ function get_dbc(){
     }
     catch (PDOException $e) {
 
+             // Create database if it doesnt exist
            if($e->getCode() == 1049) {
                echo "<div class='errorbox'> Creating database.. </div>";
                create_db();
@@ -37,6 +38,8 @@ function create_db(){
         $connection->exec($sql);
 
         echo "<div class='infobox'> Successfully created database $db</div>";
+        
+        // Create table electives
         create_table();
     }
     catch (PDOException $e) {
@@ -61,6 +64,8 @@ function create_table(){
     try {
         $connection->exec($sqlElectives);
         echo "<div class='infobox'> Table Electives created successfully </div>";
+
+        // Insert values into table
         insert_in_table();
     }
     catch (PDOException $e) {
@@ -80,6 +85,8 @@ function insert_in_table(){
     try{
         $connection->exec($sqlInput);
         echo "<div class='infobox'> Insertion successful </div>";
+
+        // Create new column in table Electives
         create_column();
     }
     catch(PDOException $e){
@@ -106,13 +113,11 @@ function create_column(){
 
 function post_to_db(){
 
-        $data = get_data_from_request();
         $connection = get_dbc();
         $table = "electives";
-        $subject = htmlspecialchars($data[0]);
-        $lecturer = htmlspecialchars($data[1]);
-        $description = htmlspecialchars($data[2]);
-    
+        $subject = helper($_POST["subject"]);
+        $lecturer = helper($_POST["lecturer"]);
+        $description = helper($_POST["description"]);
         $created_at = date('Y-m-d H:i:s');
 
         $sqlInsert = "INSERT INTO $table  (title, description, lecturer, created_at)
@@ -149,13 +154,12 @@ function get_from_db($id){
 }
 
 function update_entity($id){
-    
-    $data = get_data_from_request();
+
     $connection = get_dbc();
     $table = "electives";
-    $subject = htmlspecialchars($data[0]);
-    $lecturer = htmlspecialchars($data[1]);
-    $description = htmlspecialchars($data[2]);
+    $subject = helper($_POST["subject"]);
+    $lecturer = helper($_POST["lecturer"]);
+    $description = helper($_POST["description"]);
     $created_at = date('Y-m-d H:i:s');
 
     $sqlUpdate = "UPDATE $table 

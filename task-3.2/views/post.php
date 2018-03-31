@@ -1,12 +1,11 @@
 <?php
 
-$errors = array("","","");
-$elective = (object) array("title" => "", "lecturer" => "", "description" => "" );
+    $errors = array("","","");
 
-if($_SERVER['REQUEST_METHOD']=='POST'){
+    if($_SERVER['REQUEST_METHOD']=='POST'){
     
-    $errors = validate_form();
-    if(count(array_filter($errors)) == 0){
+        $errors = validate_form();
+        if(count(array_filter($errors)) == 0){
         post_to_db();
     }
 }
