@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="task-4.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navigation-horizontal">
+            <input type="button" class="register-btn" value="Регистрация"/>
+            <input type="button" class="login-btn" value="Вход"/>
+        </nav>
+        <nav class="navigation-vertical">
+            <ul class="navigation-vertical-list">
+                <li id="selected"><a href="#">Компютърна графика с WebGL</a></li>
+                <li><a href="#">Програмиране с GO</a></li>
+                <li><a href="#">Програмиране с Ruby</a></li>
+                <li><a href="#">Agile</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <section class="course">
+                <h2 class="course-title">Компютърна графика с WebGL</h2>
+
+                <div class="course-lecturer">
+                    <span>доц. П. Бойчев</span>
+                </div>
+                <div class="course-description">
+                    <span>След завършване на курса студентите ще могат да създават тримерни статични изображения и тримерни анимации.</span>
+                </div>
+                <div class="course-type">
+                    <label>Тип:</label>
+                    <span>задължителен избираем</span>
+                </div>
+                <div class="course-target">
+                    <label>Курс:</label>
+                    <span>1<sup>ви</sup></span>
+                </div>
+                <div class="course-program">
+                    <label>Програма:</label>
+                    <span>бакалавър</span>
+                </div>
+            </section>
+            <section class="comments">
+                <textarea class="comment-content" rows="4"  placeholder="Добавяне на коментар"></textarea>
+                <div>
+                    <input type="button" class="cancel-btn" value="Отказ"/>
+                    <input type="button" class="submit-btn" value="Публикуване"/>
+                </div>
+
+                <span class="comments-heading">Коментари</span>
+
+                <div class="single-comment">
+                    <div class="comment-meta">
+                        <a href="#">Вили Велева</a>
+                        <span class="comment-date">07.11.2015</span>
+                    </div>
+                    <blockquote>"Препоръчвам записването на курса. Интересни неща се учат, има и освобождаване с реферати."</blockquote>
+                </div>
+
+                <div class="single-comment">
+                    <div class="comment-meta">
+                        <a href="#">Вили Велева</a>
+                        <span>07.11.2015</span>
+                    </div>
+                    <blockquote>"Препоръчвам записването на курса. Интересни неща се учат, има и освобождаване с реферати."</blockquote>
+                </div>
+
+                <div class="single-comment">
+                    <div class="comment-meta">
+                        <a href="#">Вили Велева</a>
+                        <span>07.11.2015</span>
+                    </div>
+                    <blockquote>"Препоръчвам записването на курса. Интересни неща се учат, има и освобождаване с реферати."</blockquote>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</body>
+</html>

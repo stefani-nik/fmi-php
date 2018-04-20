@@ -1,0 +1,154 @@
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Links */
+
+a:link, a:visited, a:hover, a:active{
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Buttons */
+
+.register-btn, .login-btn, .submit-btn, .cancel-btn{
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-family: Arial, serif;
+    font-size: 14px;
+    border-radius: 12px;
+    outline: none;
+}
+.register-btn, .login-btn, .submit-btn{
+    color: white;
+    background-color: #97BF0E;
+    border: 1px solid #c3c3c3;
+}
+.cancel-btn{
+    color: #97BF0E;
+    background-color: white;
+    border: 1px solid #97BF0E;
+}
+
+.cancel-btn, .submit-btn{
+    margin: 0.5rem 0;
+}
+
+
+/* Horizontal Navigation */
+
+.navigation-horizontal{
+    width: 90%;
+    padding-bottom: 1rem;
+}
+.navigation-horizontal input{
+    float: right;
+}
+
+
+/* Vertical Navigation */
+
+.navigation-vertical{
+    width: 30%;
+    display: inline-block;
+}
+.navigation-vertical-list{
+    list-style-type: none;
+}
+.navigation-vertical-list li{
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    font-family: Arial, serif;
+    font-size: 16px;
+    color: #727172;
+    border-bottom: 1px solid #c3c3c3;
+}
+.navigation-vertical-list li#selected{
+    background-color: #97BF0E;
+    color: white;
+}
+
+/* Content */
+.content{
+    width: 60%;
+    display: inline-block;
+    position: absolute;
+    padding-left: 2rem;
+}
+/* Course info */
+
+.course{
+    display: block;
+}
+.course-title{
+    color: #97BF0E;
+    font-family: Arial, serif;
+    border-bottom: 2px solid #c3c3c3;
+    padding-bottom: 1rem;
+}
+.course-lecturer{
+    font-size: 24px;
+}
+
+.course-description,
+.course-type,
+.course-target,
+.course-program{
+    font-family: Arial,serif;
+    font-size: 16px;
+    padding-bottom: 0.5rem;
+}
+
+.course-lecturer,
+.course-description,
+.course-type,
+.course-target,
+.course-program{
+    font-family: Arial,serif;
+    padding-bottom: 0.5rem;
+}
+.course-type label, .course-target label, .course-program label{
+    font-style: italic;
+}
+
+/* Comments */
+
+.comments{
+    display: block;
+}
+
+.comments textarea{
+    width: 90%;
+    resize: none;
+    border-radius: 8px;
+    font-family: Arial, serif;
+    padding: 1rem;
+    outline: none;
+}
+
+.comments-heading{
+    font-family: Arial, serif;
+    font-size: 24px;
+}
+
+.single-comment{
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #c3c3c3;
+}
+
+.comment-meta a{
+    font-family: Arial, serif;
+    color: #008ae6;
+}
+.comment-meta span{
+    font-family: Arial, serif;
+    font-size: 12px;
+}
+.single-comment blockquote{
+    font-family: Arial, serif;
+    font-size: 16px;
+    margin: 1rem 0;
+}
+
+
