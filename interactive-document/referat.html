@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <title>Анимации с CSS</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="http://bg.allfont.net/allfont.css?fonts=droid-sans" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<div class="header">
+
+    <div class="sidebar">
+        <nav id="menu">
+            <ul>
+                <li>
+                <span>
+                    <a class="number-nav-item" href="#section_1">1</a>
+                    <a class="text-nav-item" href="#section_1">Въведение</a>
+                </span>
+                </li>
+                <li>
+                <span>
+                     <a class="number-nav-item" href="#section_2">2</a>
+                     <a class="text-nav-item" href="#section_2">Трансформации</a>
+                </span>
+                </li>
+                <li>
+                <span>
+                    <a class="number-nav-item" href="#section_3">3</a>
+                    <a class="text-nav-item" href="#section_3">Още Tрансформации</a>
+                </span>
+                </li>
+                <li>
+                <span>
+                    <a class="number-nav-item" href="#section_4">4</a>
+                    <a class="text-nav-item" href="#section_4">Анимации</a>
+                </span>
+                </li>
+                <li>
+                <span>
+                    <a class="number-nav-item" href="#section_5">5</a>
+                    <a class="text-nav-item" href="#section_5">Времеви функции</a>
+                </span>
+                </li>
+                <li>
+                <span>
+                    <a class="number-nav-item" href="#section_6">6</a>
+                    <a class="text-nav-item" href="#section_6">Hovering</a>
+                </span>
+                </li>
+                <li>
+                <span>
+                    <a class="number-nav-item" href="#section_7">7</a>
+                    <a class="text-nav-item" href="#section_7">Контрол</a>
+                </span>
+                </li>
+                <li>
+                <span>
+                    <a class="number-nav-item" href="#section_8">8</a>
+                    <a class="text-nav-item" href="#section_8">Референции</a>
+                </span>
+                </li>
+                <li>
+                <span>
+                    <a class="number-nav-item" href="#section_9">9</a>
+                    <a class="text-nav-item" href="#section_9">Източници</a>
+                </span>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<section class="content">
+
+    <div class="single-section">
+
+        <h2 id="section_1">1 - Въведение в CSS трансформациите</h2>
+
+
+        <p>
+            Целта на CSS трансформациите е да промените външния вид на
+            елемент в браузъра чрез преходи, ротация или други средства. Когато
+            са дефинирани в стилов документ, трансформациите се прилагат когато страницата
+            бива заредена, така че всъщност не можем да видим анимациите, които се случват.
+            Трансформациите, също така, могат да бъдат приложени при преминаване на курсора
+            на мишката през даден елемент (<tt> mouseover </tt>) или при друг подобен ефект,
+            което ще разгледаме в следващия раздел.
+        </p>
+
+        <p class="blockquote blue">
+            Предложението на Apple за CSS трансформациите изисква способността да променяте гледната си
+            точка и да работите в три измерения, но това все още е далеч.
+            Дори и демонстрираните тук функции няма да се визуализират в други браузъри,
+            докато не бъдат одобрени от органите по стандартизация, които все още се борят с CSS3 модулите.
+        </p>
+
+        <p>
+            По-долу са поставили четири идентични DIV елементи стилизирани като кутия от 100 x 60 пиксела с 2 пиксела
+            граница.
+            Впоследствие всеки елемент е променен по някакъв начин с помощта на трансформация (<tt>transform</tt>):
+        </p>
+
+        <table class="collapse" cellpadding="5">
+            <tbody>
+            <tr>
+                <td>
+                    <b style="color: #457776;">box 1</b>
+                </td>
+                <td>
+                    Транслиране надясно: <tt>transform: translate(3em,0);</tt>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b style="color: #FE5102">box 2</b>
+                </td>
+                <td>
+                    Завъртане с 30 градуса по часовниковата стрелка: <tt>transform: rotate(30deg);</tt>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b style="color: #457776;">box 3</b>
+                </td>
+                <td>
+                    Транслиране наляво и надолу: <tt>transform: translate(-3em,1em);</tt>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b style="color: #FE5102;">box 4</b>
+                </td>
+                <td>
+                    Уголемяване с два пъти: <tt>transform: scale(2);</tt>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+
+        <div class="showbox first">box 1</div>
+        <div class="showbox second">box 2</div>
+        <div class="showbox third">box 3</div>
+        <div class="showbox fourth">box 4</div>
+        <div style="clear: left;"><!-- --></div>
+
+        <p class="blockquote orange">HTML и CSS кода за този пример са следните:</p>
+
+        <code class="final">[1] The art of web
+
+            &lt;style type="text/css"&gt;
+
+            .showbox {
+            float: left;
+            margin: 4em 1em;
+            width: 100px;
+            height: 60px;
+            border: 2px solid green;
+            background-color: #fff;
+            line-height: 60px;
+            text-align: center;
+            }
+
+            &lt;/style&gt;
+
+            &lt;div class="showbox" style="<span>transform: translate(3em,0);</span>"&gt;box 1&lt;/div&gt;
+            &lt;div class="showbox" style="<span>transform: rotate(30deg);</span> border-color: <font
+                    style="color: red;">red</font>;"&gt;box 2&lt;/div&gt;
+            &lt;div class="showbox" style="<span>transform: translate(-3em,1em);</span>"&gt;box 3&lt;/div&gt;
+            &lt;div class="showbox" style="<span>transform: scale(2);</span>"&gt;box 4&lt;/div&gt;
+            &lt;div style="clear: left;"&gt;&lt;/div&gt;</code>
+
+        <p>
+            Без транслациите и червените граници на втората кутия,
+            щяхте да виждате просто четири идентични кутии, номерирани от 1 до 4.
+            Това, което виждаме в браузърите, които поддържат транслации (Safari, Chrome, Firefox, Opera),
+            прилича повече на следната картинка:
+        </p>
+
+        <p style="text-align: center;">
+            <img style="border: 2px solid #666; padding: 1em 4em;" src="img/css-transform.gif" width="504" height="128"
+                 alt="">
+        </p>
+
+        <p>
+            Трябва да се отбележи, че текстът все още може да се селектира в трансформираните елементи,
+            дори когато са завъртяни. Също така, скалирането влияе и на други свойства,
+            включително ширината на границата, размера на шрифта и други.
+        </p>
+
+    </div>
+
+
+    <div class="single-section">
+        <h2 id="section_2">2 - Анимиране на трансформациите</h2>
+
+        <p>
+            CSS Transformation сама по себе си е мощен инструмент за разработчиците,
+                но способността да създаваме <tt> анимации </tt> използвайки същите ефекти
+                <tt> -webkit-transition </tt> е много по-вълнуващо.
+            Преместете курсора на мишката върху следните четири полета за демонстрация:
+        </p>
+
+        <div class="showbox2 slideright">box 1</div>
+        <div class="showbox2 rotate" style="border-color: red;">box 2</div>
+        <div class="showbox2 slideleft">box 3</div>
+        <div class="showbox2 scale">box 4</div>
+        <div style="clear: left;"><!-- --></div>
+
+        <p>
+            Това, което виждате по-горе, са четирите полета от предишната секция в
+            техните състояния по подразбиране. Когато поставите курсора на мишката върху което и да е от полетата,
+            обаче CSS трансформацията се прилага като анимация за една секунда. Когато мишката
+            излезе извън полето, анимацията е прекратена, като всяка клетка се връща обратно към
+            оригиналното си състояние.
+        </p>
+
+        <p class="blockquote orange">
+            И можем да направим всичко това без да използваме JavaScript - само HTML и CSS!
+            Ето и пълния код за първата кутия, която се движи надясно и обратно:
+        </p>
+
+        <code>[1] The art of web
+
+            &lt;style type="text/css"&gt;
+
+            .showbox {
+            float: left;
+            margin: 4em 1em;
+            width: 100px;
+            height: 60px;
+            border: 2px solid green;
+            background-color: #fff;
+            line-height: 60px;
+            text-align: center;
+            <i> -webkit-transition: 1s ease-in-out;
+                -moz-transition: 1s ease-in-out;
+                -o-transition: 1s ease-in-out;</i>
+            transition: 1s ease-in-out;
+            }
+            .showbox.slideright<span>:hover</span> {
+            <i> -webkit-transform: translate(3em,0);
+                -moz-transform: translate(3em,0);
+                -o-transform: translate(3em,0);
+                -ms-transform: translate(3em,0);</i>
+            transform: translate(3em,0);
+            }
+            &lt;/style&gt;
+
+            &lt;div class="showbox slideright"&gt;box 1&lt;/div&gt;</code>
+
+        <p>
+            Ако това ви се струва готино, то вероятно ще бъдете още по-развълнувани
+            да разберете, че CSS анимацията може да се прилага не само върху трансформации,
+            но и върху други свойства като: цвят, прозрачност и много други.
+        </p>
+
+        <p class="blockquote blue">
+            В следващия пример, полето отляво първоначално е по-малкото от двете, зелено е
+            и има квадратна граница, докато полето отдясно е по-голямо, с червена граница и
+            заоблена граница. Придвижвайки курсора на мишката върху което и е да е от полетата,
+            ще бъде задействана анимация, която ще копира изгледа на едно от полетата върху другото и обратно.
+        </p>
+
+        <div class="showbox3 showoff">box 1</div>
+        <div class="showbox3 showoff2">box 2</div>
+        <div style="clear: left;"><!-- --></div>
+
+
+        <p>
+            Отново използваме само HTML и CSS, за да направим това.
+            Без <tt>CSS Transforms</tt> двете кутии все пак ще променят стиловете и изгледа си,
+            но това ще се случи по-скоро веднага, докато с анимациите се случва в продължение
+            на една секунда.
+        </p>
+
+        <p>
+            За по-сложни примери, можете да прочетете как можем да използваме JavaScript за започване
+            на анимация. За алтернатива на CSS преходите, и по-добър
+            контрол над анимационните пътища и времето, можете да използвате <tt>Window.requestAnimationFrame</tt>.
+        </p>
+
+    </div>
+
+    <div class="single-section">
+        <h2 id="section_3">3 - Множество трансформации върху един елемент</h2>
+
+        <p class="blockquote orange">
+            За да приложите повече от една трансформация върху даден елемент е нужно просто да
+            ги изброите една след друга, разделени с интервал. Например, за да направите анимирано меню,
+            можете да използвате следващия код:
+        </p>
+
+        <code class="final">[1] The art of web
+
+            &lt;style type="text/css"&gt;
+
+            #submenu {
+            background-color: #eee;
+            <i> -webkit-transition: 1s ease-in-out;
+                -moz-transition: 1s ease-in-out;
+                -o-transition: 1s ease-in-out;</i>
+            transition: 1s ease-in-out;
+            }
+            #submenu:hover {
+            background-color: #fc3;
+            <i> -webkit-transform: rotate(360deg) scale(2);
+                -moz-transform: rotate(360deg) scale(2);
+                -o-transform: rotate(360deg) scale(2);
+                -ms-transform: rotate(360deg) scale(2);</i>
+            transform: rotate(360deg) scale(2);
+            }
+            &lt;/style&gt;</code>
+
+        <p>
+            <b>
+                Забележете, че IE10 вече не използва представка за преходи, но представката
+                <tt>-ms-</tt> е все още задължителна за трансформации.
+            </b>
+        </p>
+
+        <p>
+            С кода, който е показан по-горе, след като придвижим курсора на мишката върху менюто,
+            то ще промени цвета си, ще се завърти и ще стане два пъти по-голямо.
+            Всичко това ще се случи в рамките на една секунда, както е показано тук:
+        </p>
+
+        <table border="0" width="100%" cellpadding="3" cellspacing="0">
+            <tbody>
+            <tr style="text-align: center;">
+                <td>
+                    <img src="img/submenu.jpg" width="300" height="150" border="1" alt="">
+                </td>
+                <td>&lt;=&gt;</td>
+                <td>
+                    <img src="img/submenu_hover.jpg" width="300" height="150" border="1" alt="">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <p class="blockquote blue">
+            Тези ефекти вече са достъпни и в последните версии на Safari.
+            Това означава, че всички OSX потрбители би трябвало да виздат тези ефекти.
+            Ваше е решението дали е добра идея да ги добавите към уеб страницата си.
+        </p>
+
+    </div>
+
+    <div class="single-section">
+        <h2 id="section_4">4 - Анимациите в действие</h2>
+
+        <p class="blockquote blue">
+            Сега ще разгледаме още един пример как можем да се забавляваме,
+            комбинирайки различни ефекти в една анимация. Може би ще успеете да предвидите
+            какъв е очаквания резултат като погледнете СSS кода?
+        </p>
+
+        <code>[1] The art of web
+
+            &lt;style type="text/css"&gt;
+
+            <i>/* initial state */</i>
+            #outerspace {
+            position: relative;
+            height: 400px;
+            background: #0c0440 url(<a href="img/outerspace.jpg"></a>);
+            color: #fff;
+            }
+            div.rocket {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            <i> -webkit-transition: 3s ease-in;
+                -moz-transition: 3s ease-in;
+                -o-transition: 3s ease-in;</i>
+            transition: 3s ease-in;
+            }
+            div.rocket div {
+            width: 92px;
+            height: 215px;
+            background: url(<a href="img/rocket.gif">/images/rocket.gif</a>) no-repeat;
+            <i> -webkit-transition: 2s ease-in-out;
+                -moz-transition: 2s ease-in-out;
+                -o-transition: 2s ease-in-out;</i>
+            transition: 2s ease-in-out;
+            }
+
+            <i>/* hover final state */</i>
+            #outerspace:hover div.rocket {
+            <i> -webkit-transform: translate(540px,-200px);
+                -moz-transform: translate(540px,-200px);
+                -o-transform: translate(540px,-200px);
+                -ms-transform: translate(540px,-200px);</i>
+            transform: translate(540px,-200px);
+            }
+            #outerspace:hover div.rocket div {
+            <i> -webkit-transform: rotate(70deg);
+                -moz-transform: rotate(70deg);
+                -o-transform: rotate(70deg);
+                -ms-transform: rotate(70deg);</i>
+            transform: rotate(70deg);
+            }
+
+            &lt;/style&gt;</code>
+
+        <p class="blockquote orange">Ето и HTML кода:</p>
+
+        <code>[1] The art of web
+
+            &lt;div id="outerspace"&gt;
+            &lt;div class="rocket"&gt;
+            &lt;div&gt;&lt;!-- rocket --&gt;&lt;/div&gt;
+            <i>.rocket</i>
+            &lt;/div&gt;<i>#outerspace</i>
+            &lt;/div&gt;</code>
+
+        <p class="blockquote blue">Когато ги сглобите се получава това:</p>
+
+
+        <div id="outerspace">
+            <div class="rocket">
+                <div><!-- rocket --></div>
+                .rocket
+            </div>
+            #outerspace
+        </div>
+
+        <p>
+            Ако използвате Safari 3 може да забележите известни проблеми с анимацията,
+            особено когато ракетата се връща в първоначалната си позиция.
+            В последната версия на WebKit всичко е доста подобрено.
+            Също така, анимациите в Opera са леко непостоянни и не всички елементи са анимирани.
+        </p>
+
+        <p class="blockquote orange">
+            Това, което се случва в анимацията която разгледахме по-горе, е че
+            DIV елемента се транслира върху екрана, докато картинката в него се завърта.
+            Просто!
+        </p>
+
+        <p>
+            За браузъра това, което се случва, е, че когато преместите
+            мишката върху фона, ракетата се транслира от дъното
+            наляво надясно за период от 3 секунди (<tt>translate()</tt>)
+            и също така се завърта със 70 градуса по посока на часовниковата стрелка през първите 2
+            секунди (<tt>rotate()</tt>). Ефектът е елементарен, но показва
+            потенциала на CSS анимациите.
+        </p>
+
+        <p>
+            За повече контрол върху анимационните пътища и времето, можем да използваме
+            <tt>WebKit Keyframes</tt>. Те също позволяват на анимацията да започне автоматично
+            и да продължи постоянно, а не само в отговор на някое от събитията на страницата.
+        </p>
+
+    </div>
+
+    <div class="single-section">
+        <h2 id="section_5">5 - Множество времеви функции</h2>
+
+        <div id="stage">#stage
+            <div id="block">#block</div>
+        </div>
+
+        <p>
+            В този пример, прилагаме четири различни прехода,
+            използвайки четири различни времеви функции.
+        </p>
+
+        <p>
+            Когато придвижим мишката върху частта отдясно (<tt>:hover</tt>), синята кутия ще се завърти,
+            ще промени цвета си от синьо на червено и ще се премести от горния ляв ъгъл,
+            в долния десен ъгъл. Това ще се случи в рамките на све секунди.
+        </p>
+
+        <p class="blockquote blue">
+            Първото нещо, което можем да забележиим, е че движението на кутията е по-скоро
+            извито, отколкото право. Това е защото използваме времевата функция
+            <tt style="color: black">ease-out</tt> за хоризонталната транслация и <tt style="color: black">ease-in</tt>
+            времевата функция
+            за вертикалната транслация.
+        </p>
+
+        <p>
+            <b>
+                За да направим анимация с извит или дори произволен път, ни е нужно да
+                използваме <tt>JavaScript</tt>, за да контролираме анимацията.
+            </b>
+        </p>
+
+        <p>
+            По време на анимацията, смяната на света от синьо в червено се случва в рамките
+            на първата секунда от прехода. След това, кутията се завърта, което се случва
+            през втората секунда от прехода.
+        </p>
+
+
+        <p style="text-align: center;">
+            <img src="img/blockanimation1.png" width="160" height="160" alt="">
+            <img src="img/blockanimation2.png" width="160" height="160" alt="">
+            <img src="img/blockanimation3.png" width="160" height="160" alt="">
+            <img src="img/blockanimation4.png" width="160" height="160" alt="">
+        </p>
+
+        <p>
+            Номерът на това е, че вместо да се дефинира
+            <tt> -webkit-transition </tt> като единично свойство, можем да го разделим
+            в съставни части. Използваме също
+            <tt> -webkit-transition-delay</tt>, което ни позволява да настроим отправната
+            точка на различните ефекти.
+        </p>
+
+
+        <p class="blockquote orange">Ето и CSS кода:</p>
+
+        <code>[1] The art of web
+
+            &lt;style type="text/css"&gt;
+
+            #block {
+            ...
+            left: 0;
+            top: 0;
+            ...
+            <span>background: blue;</span>
+            ...
+            -webkit-transition-property: left, top, <span>background</span>, -webkit-transform;
+            -webkit-transition-duration: 2s, 2s, <span>1s</span>, 1s;
+            -webkit-transition-timing-function: ease-out, ease-in, <span>linear</span>, ease-in-out;
+            -webkit-transition-delay: 0, 0, <span>0</span>, 1s;
+            ...
+            }
+            #stage:hover #block {
+            left: 100px;
+            top: 100px;
+            <span>background: red;</span>
+            -webkit-transform: rotate(360deg);
+            ...
+            }
+
+            &lt;/style&gt;</code>
+
+        <p>
+            Правилата, които се отразяват на фона са подчертани.
+            Техния преход се случва в рамите на първата секунда
+            <tt>(0s delay, 1s duration)</tt>. Трансформацията за завъртането се
+            случва във втората секунда <tt>(1s delay, 1s duration)</tt>.
+        </p>
+
+        <p>
+            <b>
+                За браузъри, различни от Chrome <tt>-webkit-</tt> представките
+                трябва да бъдат повторени, както и представката трябва да бъде заменена
+                с една от следните: <tt>-moz-</tt>, <tt>-o-</tt> и <tt>-ms-</tt>.
+                С изключение на свойството <tt>*transition*</tt>, което не изисква
+                представка за Internet Explorer 10 и по-новите версии.
+            </b>
+        </p>
+
+        <p>
+            <b>
+                Firefox изисква всички части да бъдат зададени (дори и със стойност 0)
+                в свойството <tt>-moz-transition-delay</tt>. Това означава, че
+                <tt>0s, 0s, 0s, 1s</tt> ще работи в примера по-горе.
+            </b>
+        </p>
+
+    </div>
+    <h2 id="section_6">6 - *Hovering* върху един елемент, за да се отрази на друг</h2>
+
+    <p>
+        Често искаме да задействаме една анимация при клик или придвижване на мишката
+        на друго място в страницта, а не върху конкретния елемент. С JavaScript
+        това може да бъде направено с помощта на <tt>event handler</tt>, който
+        да промени името на класа на елемента, който искаме да анимираме.
+        В такъв случай можем да зададем трансформация асоциирана с новия клас.
+    </p>
+
+    <p class="blockquote blue">
+        С помощта на CSS, има няколко опции за въздействие върху свързани елементи.
+        Това може да се случи със селектори като: <tt style="color: black;">&gt;</tt> (child),
+        <tt style="color: black;">+</tt>(adjacent sibling) и <tt style="color: black;">~</tt> (general sibling)
+        <a href="http://www.w3.org/TR/selectors/#combinators" target="_blank"
+           style="text-decoration: none; color: black;">комбинатори</a>.
+    </p>
+
+    <p>
+        Всички предходни примери изискват директно събитие <tt> hover </tt>
+        или върху самия елемент, или върху неговия контейнер, в този пример
+        синята кутийка се анимира само когато задържите курсора си над червената кутия.
+    </p>
+
+
+    <div id="stage2">
+        <div id="box1">#box1</div>
+        <div id="box2">#box2</div>
+        #stage2
+    </div>
+
+    <p>
+        Съответният CSS код е представен отдолу. Обърнете внимание, че използваме
+        <tt> + </tt> съседен комбиниран брат, за да таргетираме <tt> # box2 </tt> когато
+        мишката е върху<tt> # box1 </tt>. Комбинаторът <tt> ~ </tt> ни позволява по-голяма
+        гъвкавост, като можем да таргетираме елементи, които са по-далеч
+        от действащия елемент.
+    </p>
+
+
+    <code>[1] The art of web
+
+        &lt;style type="text/css"&gt;
+
+        #box2 {
+        position: absolute;
+        left: 120px;
+        ...
+        background: blue;
+        ...
+        <i> -webkit-transition: 1s ease-in-out;
+            -moz-transition: 1s ease-in-out;
+            -o-transition: 1s ease-in-out;</i>
+        transition: 1s ease-in-out;
+        }
+        #box1:hover <span>+</span> #box2 {
+        <i> -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);</i>
+        transform: rotate(360deg);
+        left: calc(100% - 102px);
+        background: yellow;
+        }
+
+        &lt;/style&gt;</code>
+
+    <p>
+        <b>
+            Internet Explorer 11 не може да анимира със стойности, които са зададени
+            с помощта на функцията <tt>calc()</tt>. Вместо това, ще трябва да използвате
+            фиксирани стойности.
+        </b>
+    </p>
+
+    <p class="blockquote orange">
+        Разбира се, можем да анимираме първата кутия по същото време,
+        когато таргетираме нейните сродни такива:
+    </p>
+
+
+    <div id="stage3">
+        <div id="box3">#box3</div>
+        <div id="box4">#box4</div>
+        #stage3
+    </div>
+
+    <p>
+        Уверете се, че не местите мишката извън елемента.
+        В такъв случай анимацията ще спре.
+    </p>
+
+    <p>
+        Тези примери работят, както е предвидено в Webkite (Safari, Chrome),
+        Firefox и Opera. Също така работят и в Internet Explorer 10.
+    </p>
+
+
+    <div class="single-section">
+        <h2 id="section_7">7 - Контролиране на анимациите</h2>
+
+        <p>
+            В по-горните примери вероятно сте забелязали странно поведение при приключването
+            на анимациите - особено, когато преместим мишката извън елемента преди анимацията да
+            е завършена.
+        </p>
+
+        <p>
+            Кутията в анимацията по-долу ще се качи бавно и след това ще се изстреля
+            вдясно използвайки функция за <tt>extreme cubic-bezier</tt> синхронизиране,
+            което кара елемента да стартира бързо и след това да се забави в края.
+        </p>
+
+        <p class="blockquote blue">
+            Когато преместим мишката извън елемента, той няма да се върне по същия път, тъй
+            като вертикалната анимация ще бъде на първо място и кутията ще се движи бързо
+            от дясно на ляво, преди да се забави.
+        </p>
+
+
+        <div id="stage4">
+            <div id="box5">#box</div>
+        </div>
+
+        <p class="blockquote orange">CSS кода за този пример:</p>
+
+        <code>[1] The art of web
+
+            &lt;style type="text/css"&gt;
+
+            #stage {
+            position: relative;
+            height: 4em;
+            background: #efefef;
+            text-align: center;
+            }
+            #box {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100px;
+            background: red;
+            line-height: 2em;
+            color: #fff;
+            <i> -webkit-transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);
+                -moz-transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);
+                -o-transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);</i>
+            <span>    transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);</span>
+            }
+            #stage:hover #box {
+            left: calc(100% - 100px);
+            bottom: 2em;
+            }
+
+            &lt;/style&gt;</code>
+
+        <p class="blockquote blue">
+            Можем и да контролираме анимацията в двете посоки. В този случай
+            анимацията ще изпълнява всичко в обратен ред:
+        </p>
+
+
+        <div id="stage5">
+            <div id="box6">#box</div>
+        </div>
+
+        <p>
+            Номерът е да се преминем към оригиналните настройки за преход
+            (<tt>:hover</tt>) и за "non-hover" да използваме преход, който ги обръща:
+        </p>
+
+        <code class="final">[1] The art of web
+
+            &lt;style type="text/css"&gt;
+
+            #stage {
+            position: relative;
+            height: 4em;
+            background: #efefef;
+            text-align: center;
+            }
+            #box {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100px;
+            background: red;
+            line-height: 2em;
+            color: #fff;
+            <i> -webkit-transition: 1s 4s bottom, 4s left cubic-bezier(1,0,1,1);
+                -moz-transition: 1s 4s bottom, 4s left cubic-bezier(1,0,1,1);
+                -o-transition: 1s 4s bottom, 4s left cubic-bezier(1,0,1,1);</i>
+            <span>    transition: 1s 4s bottom, 4s left cubic-bezier(1,0,1,1);</span>
+            }
+            #stage:hover #box {
+            left: calc(100% - 100px);
+            bottom: 2em;
+            <i> -webkit-transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);
+                -moz-transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);
+                -o-transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);</i>
+            transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);
+            }
+
+            &lt;/style&gt;</code>
+
+
+        <p>
+            Това може да ни бъде полезно за ефект върху меню или бутон.
+            Така можем да накараме елемента да се появи бързо и след това да се скрие
+            бавно или обратното.
+        </p>
+
+        <p>
+            Не забравяйте, че преходите, зададени с <tt>:hover</tt>
+            са тези, които ще се използват, когато се мишката се придвижи върху елемената.
+            Настройките за преход по подразбиране ще се използват при връщане на елемента към
+            първоначалното му състояние.
+        </p>
+
+    </div>
+
+    <div class="single-section">
+
+        <h2 id="section_8">8 - Референции</h2>
+
+        <ul>
+            <li><a href="https://www.the-art-of-web.com/css/3d-transforms/" target="_blank">3D Transforms and Animations</a>
+                <small style="font-size: 9px; color: #FE5102;">[CSS]</small>
+            </li>
+            <li><a href="https://www.the-art-of-web.com/css/timing-function/" target="_blank">Transition Timing Functions</a>
+                <small style="font-size: 9px; color: #FE5102;">[CSS]</small>
+            </li>
+            <li><a href="https://www.the-art-of-web.com/css/bouncing-ball-animation/" target="_blank">Bouncing Ball Animation</a>
+                <small style="font-size: 9px; color: #FE5102;">[CSS]</small>
+            </li>
+            <li><a href="https://www.the-art-of-web.com/css/infinite-photo-carousel/" target="_blank">Infinite Animated Photo Wheel</a>
+                <small style="font-size: 9px; color: #FE5102;">[CSS]</small>
+            </li>
+            <li><a href="https://www.the-art-of-web.com/css/3d-chart/" target="_blank">An actual 3D bar chart</a>
+                <small style="font-size: 9px; color: #FE5102;">[CSS]</small>
+            </li>
+            <li><a href="https://www.the-art-of-web.com/css/photo-rotator/" target="_blank">Photo Rotator with 3D Effects</a>
+                <small style="font-size: 9px; color: #FE5102;">[CSS]</small>
+            </li>
+            <li><a href="https://www.the-art-of-web.com/css/fading-slideshow-no-jquery/" target="_blank">Fading slideshow with a touch of JavaScript</a>
+                <small style="font-size: 9px; color: #FE5102;">[CSS]</small>
+            </li>
+            <li><a href="https://www.the-art-of-web.com/javascript/css-animation/" target="_blank">Controlling CSS Animations</a>
+                <small style="font-size: 9px; color: #FE5102;">[JAVASCRIPT]</small>
+            </li>
+            <li><a href="https://www.the-art-of-web.com/javascript/css-fireworks/" target="_blank">CSS Animated Fireworks</a>
+                <small style="font-size: 9px; color: #FE5102;">[JAVASCRIPT]</small>
+            </li>
+            <li><a href="https://www.the-art-of-web.com/javascript/animate-curved-path/" target="_blank">Animating objects over a curved path</a>
+                <small style="font-size: 9px; color: #FE5102;">[JAVASCRIPT]</small>
+            </li>
+        </ul>
+    </div>
+
+    <div class="single-section">
+        <h2 id="section_9">9 - Използвана литеартура</h2>
+
+        <ul>
+            <li>
+                <label><sup style="color: #FE5102;">[1]</sup> The art of web: </label>
+                <a href="https://www.the-art-of-web.com/css/css-animation/#.UVKerzaexNk" target="_blank">CSS: Animation Using CSS
+                    Transforms</a>
+            </li>
+            <li>
+                <label><sup style="color: #FE5102;">[2]</sup> W3Shool: </label>
+                <a href="https://www.w3schools.com/css/css3_transitions.asp" target="_blank">CSS Transitions</a>
+            </li>
+
+
+        </ul>
+    </div>
+
+</section>
+
+</body>
+</html>
